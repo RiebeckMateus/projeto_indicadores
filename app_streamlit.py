@@ -9,7 +9,8 @@ ano = st.number_input('Escolha um ano:', min_value=2000, max_value=2100, step=1,
 
 if st.button("Buscar dados"):
     try:
-        url_base = "http://localhost:8000"
+        # url_base = "http://localhost:8000"
+        url_base = "https://projeto-indicadores.onrender.com"
 
         resp_dados = requests.get(f"{url_base}/indicadores/ipca", params={"ano": ano})
         resp_media = requests.get(f"{url_base}/indicadores/ipca/media", params={"ano": ano})
